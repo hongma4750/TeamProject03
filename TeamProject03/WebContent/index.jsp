@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+1
 <div style="text-align:center;">
 <h1>자 이제 시작이야</h1>
-<h2>꽃밭에 블로그</h2>
-<h3>홍테스트</h3>
+<h2>꽃밭에 블로그</h2><br><br>
+<h1 style="color:red">껌 어디갔게~</h1><br>
+<img src="image/1.PNG"/>
 </div>
 
 </body>
