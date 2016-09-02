@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+  <mapper namespace="SistMember">
+  	
+  	<select id="login" parameterType="sist.co.Model.SistMemberVO" resultType="sist.co.Model.SistMemberVO">
+  		SELECT * FROM SISTMEMBER WHERE ID = #{id} AND PW = #{pw}
+  	</select>
+  	
+  	<insert id="addMember" parameterType="sist.co.Model.SistMemberVO">
+  		INSERT INTO SISTMEMBER VALUES (#{id},#{pw},#{name},#{email},3)
+  	</insert>
+  	
+  	<select id="getID" parameterType="sist.co.Model.SistMemberVO" 	resultType="java.lang.Integer">
+  		SELECT NVL(COUNT(*), 0) FROM SISTMEMBER WHERE ID = #{id}
+  	</select>
+  	
+  	
+  	<update id="createTable" parameterType="HashMap">
+  		${sql}
+  	</update>
+  	
+  </mapper>
+
