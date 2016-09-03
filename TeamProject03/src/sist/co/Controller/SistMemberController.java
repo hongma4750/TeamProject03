@@ -26,11 +26,14 @@ public class SistMemberController {
 	@Autowired
 	SistMemberService sistMemberService;
 
-	@RequestMapping(value="login.do", method=RequestMethod.GET)
-	public String login(Model model){
-		logger.info("환영합니다 login.do로 이동중" + new Date());
-		return "login.tiles";
+	@RequestMapping(value="index.do",method=RequestMethod.GET)
+	public String index(Model model){
+		logger.info("환영합니다. index.do 실행중");
+		return "index.tiles";
 	}
+	
+	
+	
 	
 	
 }

@@ -7,7 +7,8 @@
     <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 
     <fmt:requestEncoding value="utf-8"/>
-    <tiles:insertAttribute name="common"/>
+    <%-- <tiles:insertAttribute name="common"/> --%>
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -16,38 +17,72 @@
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css"/>
 </head>
 
-<div id="body_wrap">
-	<div id="main_wrap">
-		<div id="header_wrap">
-			<tiles:insertAttribute name="top_inc"/>
-			<tiles:insertAttribute name="top_menu"/>
-		</div>	
-		
-		<div id="middle_wrap">
-			<div id="sidebar_wrap">
-				<tiles:insertAttribute name="left_main"/>			
-			</div>
-			<div id="content_wrap">
-				<div id="content_title_wrap">
-					<div class="title">${doc_title}</div>
-				</div>	
-				
-				<tiles:insertAttribute name="main"/>		
-			</div>		
-		</div>	
-		
-		<div id="footer_wrap">
-			<tiles:insertAttribute name="bottom_inc"/>		
-		</div>			
-	</div>
-</div>
+<div id="wrap">
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$("#content_title_wrap div.title").css("background-image", 
-			"url('<%=request.getContextPath()%>/image/ico_sub_sb.gif')");	
-});
-</script>
+	<!-- 맨 위 헤더 -->
+	<div id="header" >
+		<div id="header_logo">
+			<tiles:insertAttribute name="header_logo"/>
+		</div>
+		
+		<div id="header_nav"><!-- id="header_nav" --> 
+			<tiles:insertAttribute name="header_nav"/>
+		</div>
+	</div>
+	<!-- 맨 위 헤더 -->
+
+	
+	<!-- 중간 위 스팟 내용들 바뀌는 부분 -->
+	
+	<div id="spot" style="background-color:yellow;">
+		<tiles:insertAttribute name="spot"/>
+	</div>
+	
+	
+	<!-- 중간 위 스팟 내용들 바뀌는 부분 -->
+	<br>
+	
+	<!-- 중간 제일 중요한 부분 -->
+	<div id="container" >
+		<!-- 중간-왼쪽  <블로그 추천 부분> -->
+		<div id="blogArea" style="background-color:red;">
+			<tiles:insertAttribute name="blogArea"/>
+		</div>
+		<!-- 중간-왼쪽  <블로그 추천 부분> -->
+		
+		
+		<!-- 중간-중간  <이웃소식,글 추천> -->
+		<div id="content"  >
+			<tiles:insertAttribute name="content"/>
+		</div>
+		<!-- 중간-중간  <이웃소식,글 추천> -->
+		
+		
+		
+		<!-- 중간-오른쪽  <로그인박스, 공지사항> -->
+		<div id="template_aside" style="background-color:#FFB2D9;">
+			<div id="login_box" >
+				<tiles:insertAttribute name="login_box"/>
+			</div>
+			
+			<div id="noticeArea">
+				<tiles:insertAttribute name="noticeArea"/>
+			</div>
+		</div>
+		<!-- 중간-오른쪽  <로그인박스, 공지사항> -->
+	</div>
+	
+	<!-- 중간 제일 중요한 부분 -->
+	<br><br><br><br>
+	
+	
+	<!-- 맨 아래 푸터 부분 -->
+	<div id="footer" style="background-color:skyblue;">
+		<tiles:insertAttribute name="footer"/>
+	</div>
+	<!-- 맨 아래 푸터 부분 -->
+	
+</div>
 
 </body>
 </html>

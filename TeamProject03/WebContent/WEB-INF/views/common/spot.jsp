@@ -10,10 +10,6 @@
 <fmt:requestEncoding value="utf-8"/>
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <!-- 부트스트랩 링크 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,14 +18,15 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<title>홍마띠</title>
 
-</head>
-<body>
+<div class="row" >
+
+  <a href="#" class="thumbnail" style="display:inline-block; float:left;">
+      <img src="image/see.jpg" class="img-responsive" alt="Responsive image" style="height:228px;">
+    </a>
+ 
+</div>
 
 
-<%
-response.sendRedirect("./index.do");
-%>
-</body>
-</html>
+
+
