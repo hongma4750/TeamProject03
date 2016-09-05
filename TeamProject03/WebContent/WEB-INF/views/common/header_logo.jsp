@@ -45,17 +45,24 @@
       </form>
       
       
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" data-toggle="modal" data-target="#myModal">로그인</a></li>
-      </ul>
+      <c:if test="${login.id eq null }">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="login.do" >로그인</a></li>
+	      </ul>
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="regi.do" >회원가입</a></li>
+	      </ul>
+      </c:if>
+      
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <!-- Modal -->
+<!--<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -71,4 +78,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->

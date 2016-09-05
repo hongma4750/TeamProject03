@@ -32,6 +32,18 @@ public class SistMemberController {
 		return "index.tiles";
 	}
 	
+	@RequestMapping(value="login.do",method=RequestMethod.GET)
+	public String login(Model model){
+		logger.info("현재 login.do 실행중");
+		return "login.tiles";
+	}
+	
+	@RequestMapping(value="regi.do",method=RequestMethod.GET)
+	public String regi(Model model){
+		logger.info("regi.do 실행중");
+		return "regi.tiles";
+	}
+	
 	
 	
 	
