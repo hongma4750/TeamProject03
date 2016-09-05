@@ -16,7 +16,7 @@
 	<script type="text/javascript" src="<%=request.getContextPath()%>/js/go_url.js"></script>
 	<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/style.css"/>
 </head>
-
+<body>
 <div id="wrap">
 
 	<!-- 맨 위 헤더 -->

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+ 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -71,7 +71,7 @@
                 
                 <hr>
                 <div id="row" style="text-align:center;">
-                	<small><a href="#" style="text-decoration: none;color:#999999;">아이디 찾기</a></small>
+                	<small><a href="idfind.do?menu=id" style="text-decoration: none;color:#999999;">아이디 찾기</a></small>
                 	|
                 	<small><a href="#" style="text-decoration: none;color:#999999;">비밀번호 찾기</a></small>
                 	|

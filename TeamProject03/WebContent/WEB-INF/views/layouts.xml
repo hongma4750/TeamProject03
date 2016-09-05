@@ -25,5 +25,23 @@
   	
   	<definition name="regi.tiles" template="/WEB-INF/views/member/regi.jsp">
   	</definition>
+  	
+  	<definition name="idfind.tiles" template="/WEB-INF/views/find-tiles.jsp">
+  		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+  		<put-attribute name="find_header" value="/WEB-INF/views/common/find/find_header.jsp"/>
+  		<put-attribute name="find_nav" value="/WEB-INF/views/common/find/find_nav.jsp"/>
+  		<put-attribute name="find_content" value="/WEB-INF/views/common/find/find_content.jsp"/>
+  		<put-attribute name="find_footer" value="/WEB-INF/views/common/find/find_footer.jsp"/>
+  	</definition>
+  	
+  	<definition name="find_id_ok.tiles" extends="idfind.tiles">
+  		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+  		<put-attribute name="find_header" value="/WEB-INF/views/common/find/find_header.jsp"/>
+  		<put-attribute name="find_nav" value="/WEB-INF/views/common/find/find_nav.jsp"/>
+  		<put-attribute name="find_content" value="/WEB-INF/views/common/find/find_id_ok.jsp"/>
+  		<put-attribute name="find_footer" value="/WEB-INF/views/common/find/find_footer.jsp"/>
+  	</definition>
+  	
+
 
 </tiles-definitions>

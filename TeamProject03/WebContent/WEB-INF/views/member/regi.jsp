@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+ 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -108,9 +108,9 @@
 						  <label class="btn btn-primary" id="genderChk" style="width:50%; ">
 						    <input type="radio" name="m_gender" id="option2" autocomplete="off" value="1"> 여자
 						  </label>
- 							 <br>
+ 							 
 						</div>	
-						
+						<br>
 						<div id="row" style="text-align:center;">
 							<div class="col-md-2" style="font-size:20px; ">
 								<p class="text-muted" style="margin:auto; padding:auto;">생일</p>

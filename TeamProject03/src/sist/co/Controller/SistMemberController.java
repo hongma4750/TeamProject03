@@ -44,7 +44,24 @@ public class SistMemberController {
 		return "regi.tiles";
 	}
 	
+	@RequestMapping(value="idfind.do",method=RequestMethod.GET)
+	public String idfind(HttpServletRequest request, Model model){
+		logger.info("idfind.do 실행중");
+		
+		String menu = request.getParameter("menu");
+		model.addAttribute("menu",menu);
+		return "idfind.tiles";
+	}
 	
+	@RequestMapping(value="find_id_ok.do", method=RequestMethod.GET)
+	public String find_id_ok(HttpServletRequest request, Model model){
+		logger.info("find_id_ok.do 실행중");
+		
+		String menu = request.getParameter("menu");
+		model.addAttribute("menu",menu);
+		
+		return "find_id_ok.tiles";
+	}
 	
 	
 	
