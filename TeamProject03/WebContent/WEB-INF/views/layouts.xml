@@ -5,7 +5,7 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
        
-<tiles-definitions>
+<tiles-definitions> 
 	
 	<definition name="index.tiles" template="/WEB-INF/views/layouts-tiles.jsp">
 	    <!-- <put-attribute name="common" value="/WEB-INF/views/common/common.jsp"/> -->

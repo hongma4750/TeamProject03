@@ -22,7 +22,7 @@ import sist.co.Service.SistMemberService;
 public class SistMemberController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(SistMemberController.class);
-	
+	 
 	@Autowired
 	SistMemberService sistMemberService;
 
