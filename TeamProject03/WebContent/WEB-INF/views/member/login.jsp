@@ -73,7 +73,7 @@
                 <div id="row" style="text-align:center;">
                 	<small><a href="idfind.do?menu=id" style="text-decoration: none;color:#999999;">아이디 찾기</a></small>
                 	|
-                	<small><a href="#" style="text-decoration: none;color:#999999;">비밀번호 찾기</a></small>
+                	<small><a href="pwfind.do?menu=pw" style="text-decoration: none;color:#999999;">비밀번호 찾기</a></small>
                 	|
                 	<small><a href="regi.do" style="text-decoration: none;color:#999999;">회원가입</a></small>
                 </div>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+ 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
@@ -9,9 +9,7 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <fmt:requestEncoding value="utf-8"/>
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
- 
-<html>
-<head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 부트스트랩 링크 -->
@@ -21,7 +19,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
-
 <style type="text/css">
 /* 	 a{
 		height:70px;
@@ -63,27 +60,29 @@
 
 </style>
 
-<div style="width:100%; height:100%;;background-color:#5AB81A; color:white; text-align:center;">
-    <ul class="nav nav-tabs" id="myTab" style="height:100%;">
-    	<c:if test="${menu eq 'id' }">
-    		<li class="active" style="height:100%;">
-			 	 <a href="#">아이디 찾기</a>
-			  </li>
-			  
-			  <li style="height:100%;">
-			  	<a href="pwfind.do?menu=pw">비밀번호찾기</a>
-			  </li>
-    	</c:if>
-    	
-    	<c:if test="${menu eq 'pw' }">
-    		<li  style="height:100%;">
-			 	 <a href="idfind.do?menu=id" >아이디 찾기</a>
-			  </li>
-			  
-			  <li class="active"style="height:100%;">
-			  	<a href="#" >비밀번호찾기</a>
-			  </li>
-    	</c:if>
-	  
-	</ul>
+
+<div style="height:100%; ">
+    
+    <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">     
+    		<div>
+                비밀번호 찾기
+       		 </div>
+       		 
+       		 <hr>
+       		 
+        <div class="panel panel-success"> 
+            <div class="panel-body">
+                
+                <input type="text" class="form-control" name="id" placeholder="아이디" autofocus>
+                
+                
+            </div>			
+        </div>
+        
+        <div style="text-align:center;">
+			<input type="button" value="다음" onclick="location.href='find_pw_se.do?menu=pw'">
+		</div>
+		
+    </div>
+    
 </div>

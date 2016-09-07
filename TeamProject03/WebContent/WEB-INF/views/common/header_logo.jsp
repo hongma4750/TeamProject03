@@ -47,18 +47,72 @@
       
       <c:if test="${login.id eq null }">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="login.do" >로그인</a></li>
-	      </ul>
+	         <li><a href="login.do" >로그인</a></li>
 	      
-	      <ul class="nav navbar-nav navbar-right">
+	      
+	      
 	        <li><a href="regi.do" >회원가입</a></li>
-	      </ul>
+	      
+	      
+	      
+	        <li><a href="myPage.do" >회원정보</a></li> 
+	      
+      
+      
+      		
+      			<li>
+                  	<a href="#" id="userInfo" >
+                  		<i class="glyphicon glyphicon-user"></i>
+                  		<span>김홍민 님</span>
+                  	</a>
+                  </li>
+                  
+                  <li>
+                  	<a href="#">
+                  		<i class="glyphicon glyphicon-bell"></i>               		
+                  	</a>
+                  </li>
+                  
+                  <li>
+                  	<a href="#">
+                  		<i class="glyphicon glyphicon-envelope"></i>
+                  	</a>
+                  </li>
+      			</ul>
+      </c:if>
+      
+      
+      <c:if test="${login.id ne null }">
+      	
       </c:if>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+<div id="sign_in" style="position:absolute; top:69px; z-index:2; right:0px; 
+     background-color: #fff; border:1px solid #000; padding:0; margin:0; 
+     width: 316px; height: 172px; display: none;">
+  
+	<iframe src="userInfo.do"  scrolling="no" width="100%" height="100%"></iframe>
+  
+</div>
+
+<script>
+$('#userInfo').click(function(){
+    //비로그인시 로그인 안내 div태그
+    document.all.sign_in.style.display = "inherit";
+ });
+ 
+$('#btnClose').click(function(){
+    document.all.sign_in.style.display = "none";
+ });
+ 
+$('#example').popover(options)
+
+ 
+ 
+</script>
 
 
  <!-- Modal -->

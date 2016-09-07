@@ -42,6 +42,29 @@
   		<put-attribute name="find_footer" value="/WEB-INF/views/common/find/find_footer.jsp"/>
   	</definition>
   	
+  	<definition name="pwfind.tiles" extends="idfind.tiles">
+  		<put-attribute name="find_content" value="/WEB-INF/views/common/find/find_pw.jsp"/>
+  	</definition>
+  	
+  	<definition name="find_pw_se.tiles" extends="idfind.tiles">
+  		<put-attribute name="find_content" value="/WEB-INF/views/common/find/find_pw_se.jsp"/>
+  	</definition>
+  	
+  	<definition name="find_pw_ok.tiles" extends="idfind.tiles">
+  		<put-attribute name="find_content" value="/WEB-INF/views/common/find/find_pw_ok.jsp"/>
+  	</definition>
+  	
+  	<definition name="myPage.tiles" template="/WEB-INF/views/member/myPage.jsp">
+  	</definition>
+  	
+  	<definition name="myProfile.tiles" template="/WEB-INF/views/member/myProfile.jsp">
+  	</definition>
+  	
+  	<definition name="myInfo.tiles" template="/WEB-INF/views/member/myInfo.jsp">
+  	</definition>
+  	
+  	<definition name="userInfo.tiles" template="/WEB-INF/views/member/userInfo.jsp"></definition>
+  	
 
 
 </tiles-definitions>

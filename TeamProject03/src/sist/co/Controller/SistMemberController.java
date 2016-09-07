@@ -63,6 +63,62 @@ public class SistMemberController {
 		return "find_id_ok.tiles";
 	}
 	
+	@RequestMapping(value="pwfind.do", method=RequestMethod.GET)
+	public String pwfind(HttpServletRequest request, Model model){
+		logger.info("pwfind.do 실행중");
+		
+		String menu = request.getParameter("menu");
+		model.addAttribute("menu",menu);
+		return "pwfind.tiles";
+	}
+	
+	@RequestMapping(value="find_pw_se.do", method=RequestMethod.GET)
+	public String find_pw_se(HttpServletRequest request, Model model){
+		logger.info("find_pw_se.do 실행중");
+		
+		String menu = request.getParameter("menu");
+		model.addAttribute("menu",menu);
+		return "find_pw_se.tiles";
+	}
+	
+	@RequestMapping(value="find_pw_ok.do", method=RequestMethod.GET)
+	public String find_pw_ok(HttpServletRequest request, Model model){
+		logger.info("find_pw_ok.do 실행중");
+		
+		String menu = request.getParameter("menu");
+		model.addAttribute("menu",menu);
+		return "find_pw_ok.tiles";
+	}
+	
+
+	@RequestMapping(value="myPage.do", method=RequestMethod.GET)
+	public String myPage(Model model){
+		logger.info("myPage.do 실행중");
+		
+		return "myPage.tiles";
+	}
+	
+	@RequestMapping(value="myProfile.do", method=RequestMethod.GET)
+	public String myProfile(Model model){
+		logger.info("myProfile.do 실행중");
+		
+		return "myProfile.tiles";
+	}
+	
+	@RequestMapping(value="myInfo.do", method=RequestMethod.GET)
+	public String myInfo(Model model){
+		logger.info("myInfo.do 실행중");
+		
+		return "myInfo.tiles";
+	}
+	
+	@RequestMapping(value="userInfo.do",method=RequestMethod.GET)
+	public String userInfo(Model model){
+		logger.info("userInfo.do 실행중");
+		
+		return "userInfo.tiles";
+	}
+	
 	
 	
 }

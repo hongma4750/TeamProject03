@@ -22,7 +22,7 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<title>홍마띠</title>
+<title>앙 홍마띠!</title>
 
 </head>
 <body>

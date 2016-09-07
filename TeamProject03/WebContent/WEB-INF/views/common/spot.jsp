@@ -19,9 +19,9 @@
 <!-- 부트스트랩 링크 -->
 
 
-<div class="row" >
+<div class="row" style="z-index:1;">
 
-  <a href="#" class="thumbnail" style="display:inline-block; float:left;">
+  <a href="#" class="thumbnail" style="display:inline-block; float:left;z-index:1;">
       <img src="image/see.jpg" class="img-responsive" alt="Responsive image" style="height:228px;">
     </a>
  
