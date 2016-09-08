@@ -119,6 +119,13 @@ public class SistMemberController {
 		return "userInfo.tiles";
 	}
 	
+	@RequestMapping(value="blogInfo.do",method=RequestMethod.GET)
+	public String blogInfo(Model model){
+		logger.info("blogInfo.do 실행중");
+		
+		return "blogInfo.tiles";
+	}
+	
 	
 	
 }

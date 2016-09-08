@@ -64,7 +64,7 @@
   	</definition>
   	
   	<definition name="userInfo.tiles" template="/WEB-INF/views/member/userInfo.jsp"></definition>
-  	
+  	<definition name="blogInfo.tiles" template="WEB-INF/views/member/blogInfo.jsp"></definition>
 
 
 </tiles-definitions>
