@@ -5,7 +5,7 @@ import java.util.HashMap;
 import sist.co.Model.SistMemberVO;
 
 public interface SistMemberService {
-	
+	 
 	//로그인
 	SistMemberVO login(SistMemberVO member)throws Exception;
 	

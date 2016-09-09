@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
@@ -9,10 +9,6 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <fmt:requestEncoding value="utf-8"/>
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
- 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 부트스트랩 링크 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +18,4 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<title>홍마띠</title>
-
-</head>
-<body>
-
-<<<<<<< HEAD
-<div style="text-align:center;">
-<h1>자 이제 시작이야</h1>
-<h2>꽃밭에 블로그</h2>
-z
-</div>
-=======
->>>>>>> refs/heads/master
-
-<%
-response.sendRedirect("./index.do");
-%>
-</body>
-</html>
+푸터

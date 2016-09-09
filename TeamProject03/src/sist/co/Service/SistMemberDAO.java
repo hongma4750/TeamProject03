@@ -10,7 +10,7 @@ import sist.co.Model.SistMemberVO;
 
 @Repository
 public class SistMemberDAO {
-
+ 
 	@Autowired	//DI
 	private SqlSession sqlSession;		//DI가 무엇인가~?   new 생성자를 생략할수있습니다
 	
