@@ -5,8 +5,87 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
        
-<tiles-definitions>
-	<definition name="login.tiles" template="/WEB-INF/views/login/login.jsp">		
-	</definition>
+<tiles-definitions> 
+	
+	<definition name="index.tiles" template="/WEB-INF/views/layouts-tiles.jsp">
+	    <!-- <put-attribute name="common" value="/WEB-INF/views/common/common.jsp"/> -->
+	    <put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+	    <put-attribute name="header_logo" value="/WEB-INF/views/common/header_logo.jsp"/>
+	    <put-attribute name="header_nav" value="/WEB-INF/views/common/header_nav.jsp"/>
+	    <put-attribute name="spot" value="/WEB-INF/views/common/spot.jsp"/>
+	    <put-attribute name="blogArea" value="/WEB-INF/views/common/blogArea.jsp"/>
+	    <put-attribute name="content" value="/WEB-INF/views/common/content.jsp"/>
+	    <put-attribute name="login_box" value="/WEB-INF/views/common/login_box.jsp"/>
+	    <put-attribute name="noticeArea" value="/WEB-INF/views/common/noticeArea.jsp"/>
+	    <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+	    <put-attribute name="main" value="/WEB-INF/views/friend/news/fnewslist.jsp"/>
+  	</definition>
+  	
+  	<!-- 이웃 -->
+  	<!-- 이웃소식_메인 -->
+  	<!-- 메뉴_전체 -->
+  	<definition name="fnewslist.tiles" extends="index.tiles">
+  	  <put-attribute name="main" value="/WEB-INF/views/friend/news/fnewslist.jsp"/>
+  	</definition>
+  	<!-- 메뉴_새글보기 -->
+  	<definition name="newlist.tiles" extends="index.tiles">
+  	  <put-attribute name="main" value="/WEB-INF/views/friend/news/newlist.jsp"/>
+  	</definition>
+  	<!-- 메뉴_이웃의 이웃 -->
+  	<definition name="foffriendlist.tiles" extends="index.tiles">
+  	  <put-attribute name="main" value="/WEB-INF/views/friend/news/foffriendlist.jsp"/>
+  	</definition>
+  	<!-- 메뉴_이웃목록 -->
+  	<definition name="friends.tiles" extends="index.tiles">
+  	  <put-attribute name="main" value="/WEB-INF/views/friend/news/friends.jsp"/>
+  	</definition>
+  	
+  	<!-- 이웃추가_팝업 -->
+  	<!-- 팝업_이웃,서로이웃 선택-->
+  	<definition name="addfriend.tiles" template="/WEB-INF/views/friend/popup/addfriend.jsp">
+  	</definition>
+  	<!-- 팝업_이웃그룹 선택-->
+  	<definition name="addfollowGroup.tiles" template="/WEB-INF/views/friend/popup/addfollowGroup.jsp">
+  	</definition>
+  	<!-- 팝업_서로이웃그룹 선택-->
+  	<definition name="adddblfollowGroup.tiles" template="/WEB-INF/views/friend/popup/adddblfollowGroup.jsp">
+  	</definition>
+  	
+  	
+  	<!-- 관리홈_메인 -->
+  	<definition name="settingmain.tiles" template="/WEB-INF/views/layouts-tiles_settinghome.jsp">
+	    <put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+	    <put-attribute name="header_logo" value="/WEB-INF/views/common/header_logo.jsp"/>
+	    <put-attribute name="header_nav" value="/WEB-INF/views/common/header_nav.jsp"/>
+	    <put-attribute name="blogArea" value="/WEB-INF/views/common/blogArea.jsp"/>
+	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/settinghome.jsp"/>
+	    <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
+  	</definition>
+  	
+  	<!-- 관리메뉴_이웃,그룹관리 -->
+  	<definition name="setfriendGroup.tiles" extends="settingmain.tiles">
+  	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/setfriendGroup.jsp"/>
+  	</definition>
+  	<!-- 관리메뉴_나를추가한 이웃 -->
+  	<definition name="setfollower.tiles" extends="settingmain.tiles">
+  	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/setfollower.jsp"/>
+  	</definition>
+  	<!-- 관리메뉴_서로이웃 맺기-->
+  	<definition name="setdblfollow.tiles" extends="settingmain.tiles">
+  	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/setdblfollow.jsp"/>
+  	</definition>
+  	<!-- 이웃 -->
+  	
+  	<!-- 주제별 글보기 -->
+  	<!-- 메뉴_전체 -->
+  	<definition name="topiclist.tiles" extends="index.tiles">
+  	  <put-attribute name="main" value="/WEB-INF/views/topic/topiclist.jsp"/>
+  	</definition>
+  	
+  	<!-- 로그인박스 -->
+  	<!-- 내블로그 -->
+  	<definition name="blog.tiles" template="/WEB-INF/views/friend/blog/blog.jsp">
+  	</definition>
+  	<!-- 로그인박스 -->
 
 </tiles-definitions>

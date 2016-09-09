@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class SistMemberVO {
 	private String id;
-	private String pw;
+	private String pw; 
 	private String name;
 	private String email;
 	private int auth;
