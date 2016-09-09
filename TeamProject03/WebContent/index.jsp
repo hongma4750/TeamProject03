@@ -11,7 +11,7 @@
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
  
 <html>
-<head>
+<head> 
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 부트스트랩 링크 -->
