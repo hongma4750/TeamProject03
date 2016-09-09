@@ -20,7 +20,16 @@
 
 <div style="width:100%; background-color:white; height:100%; text-align:center; ">
 
-	<div class="row" style="text-align:left; margin:auto; padding:auto;">
+	
+	
+	
+	<c:choose>
+		<c:when test="${login.m_id ne null }">
+			<a href="blog.do" title="내 블로그 가기">내 블로그 가기</a>
+		</c:when>
+		
+		<c:otherwise>
+			<div class="row" style="text-align:left; margin:auto; padding:auto;">
 		<small>내 블로그에 글을 남기려면</small>
 	</div>
 	<br>
@@ -43,5 +52,7 @@
 			<small><a href="regi.do" style="color:#A6A6A6; text-decoration: none;">회원가입</a></small>
 		</div>
 	</div>
+		</c:otherwise>
+	</c:choose>
 	
 </div>

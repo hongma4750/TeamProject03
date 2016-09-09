@@ -67,4 +67,70 @@
   	<definition name="blogInfo.tiles" template="WEB-INF/views/member/blogInfo.jsp"></definition>
 
 
+
+
+
+<!--///////////// 블로그 레이아웃 타일즈/////////////////////////-->
+
+ <!--블로그형///////////////////////////  --> 	
+	<!-- 기본 블로그형 -->
+	<definition name="blog.tiles" template="/WEB-INF/views/Blayouts-tiles.jsp">
+	   	<put-attribute name="header" value="/WEB-INF/views/blog_common/header.jsp"/>
+	    <put-attribute name="header_logo" value="/WEB-INF/views/blog_common/header_logo.jsp"/>
+	    <put-attribute name="header_line" value="/WEB-INF/views/blog_common/header_line.jsp"/>
+	    <put-attribute name="top" value="/WEB-INF/views/blog_common/top.jsp"/>
+	    <put-attribute name="content" value="/WEB-INF/views/blog_common/BtypeContent.jsp"/>
+	    <put-attribute name="footer" value="/WEB-INF/views/blog_common/footer.jsp"/>
+  	</definition>
+  	
+  	<!-- 블로그형 게시판 상세페이지 -->
+	<definition name="BbbsDetail.tiles" extends="blog.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/blog/BbbsDetail.jsp"/>
+	</definition> 
+	
+	 	
+ <!--앨범형///////////////////////////  --> 	
+ 
+ 
+  <!-- 앨범형 블로그 -->	
+  	<definition name="pictype.tiles" extends="blog.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/blog_common/PtypeContent.jsp"/>
+	</definition> 
+	
+		
+	<!-- 앨범형 게시판 상세페이지 -->
+	<definition name="PbbsDetail.tiles" extends="blog.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/blog/PbbsDetail.jsp"/>
+	</definition>  
+	
+	
+	
+	<!-- 블록그 내 검색 페이지 -->
+	<definition name="blogsearch.tiles" extends="blog.tiles">
+		<put-attribute name="content" value="/WEB-INF/views/blog_common/blogsearch.jsp"/>
+	</definition> 
+	
+	
+<!-- 글쓰기 페이지///////////////////////// -->  	
+ <!-- 글쓰기 페이지는 블로그랑 다르게 생김 -->
+  	<definition name="bbswrite.tiles" template="/WEB-INF/views/Blayouts-tiles2.jsp">
+	   	<put-attribute name="header2" value="/WEB-INF/views/writeblog/header.jsp"/>
+	    <put-attribute name="header_logo2" value="/WEB-INF/views/writeblog/header_logo.jsp"/>
+	    <put-attribute name="content2" value="/WEB-INF/views/writeblog/bbswrite.jsp"/>
+  	</definition>
+	
+
+	<!-- 글 수정 -->
+	<definition name="bbsupdate.tiles" extends="bbswrite.tiles">
+		<put-attribute name="content2" value="/WEB-INF/views/writeblog/bbsupdate.jsp"/>
+	</definition> 
+	
+	<!-- 투표 팝업 페이지 -->
+	<definition name="poll_pop.tiles" template="/WEB-INF/views/pop/poll_pop.jsp">
+	</definition> 
+	
+
+	
+
+
 </tiles-definitions>

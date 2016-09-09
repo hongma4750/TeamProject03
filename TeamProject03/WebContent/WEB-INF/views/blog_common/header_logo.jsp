@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
@@ -9,10 +9,6 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <fmt:requestEncoding value="utf-8"/>
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
- 
-<html>
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 부트스트랩 링크 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +18,21 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<title>앙 홍마띠!</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/blog.css"/>
+<!-- css  -->
 
-</head>
-<body>
 
-<<<<<<< HEAD
-<div style="text-align:center;">
-<h1>자 이제 시작이야</h1>
-<h2>꽃밭에 블로그</h2>
-z
+<!-- 상단 이동 메뉴  - 로그인,블로그홈-->
+<div class="head_move">
+	<a href="#none" title="friend">이웃블로그</a> | 
+	<a href="index.do" title="index">블로그 홈</a> | 
+	<a href="#none" title="idmenu">아이디</a> 
 </div>
-=======
->>>>>>> refs/heads/master
 
-<%
-response.sendRedirect("./index.do");
-%>
-</body>
-</html>
+
+<!-- 블로그 제목 -->
+<div class="head_logo">
+    <a class="navbar-brand" href="blog.do">ssunssun님의 블로그임</a>
+</div>
+

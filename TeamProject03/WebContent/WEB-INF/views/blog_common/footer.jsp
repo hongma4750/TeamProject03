@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
@@ -9,10 +9,6 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <fmt:requestEncoding value="utf-8"/>
 <!-- tag들 필요하면 Ctrl+c  /   Ctrl+v -->
- 
-<html>
-<head> 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- 부트스트랩 링크 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,22 +18,34 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<title>앙 홍마띠!</title>
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/blog.css"/>
+<!-- css  -->
 
-</head>
-<body>
-
-<<<<<<< HEAD
-<div style="text-align:center;">
-<h1>자 이제 시작이야</h1>
-<h2>꽃밭에 블로그</h2>
-z
+<div class="guest">
+	<strong>다녀간 블로거</strong>
+	<p> hyering1228님의블..x</p>
+	<p> 훌륭한 판단의 표본 x</p>
 </div>
-=======
->>>>>>> refs/heads/master
 
-<%
-response.sendRedirect("./index.do");
-%>
-</body>
-</html>
+
+ <div class="navbar-form navbar-left" role="search">
+   <div class="form-group">
+     <input type="text" class="form-control" placeholder="Search">
+   </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+ </div>
+ 
+ 
+ 
+ <script type="text/javascript">
+$(function(){
+	/* 작성취소버튼 누르면 블로그 홈으로 이동 */
+	$(".btn-default").click(function(){
+		location.href="blogsearch.do";
+	});
+});
+</script>
+ 
+ 
+ 
