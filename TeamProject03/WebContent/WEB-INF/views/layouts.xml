@@ -62,6 +62,11 @@
 	    <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
   	</definition>
   	
+  	<!-- 관리홈 -->
+  	<definition name="settinghome.tiles" extends="settingmain.tiles">
+  	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/settinghome.jsp"/>
+  	</definition>
+  	
   	<!-- 관리메뉴_이웃,그룹관리 -->
   	<definition name="setfriendGroup.tiles" extends="settingmain.tiles">
   	    <put-attribute name="main" value="/WEB-INF/views/friend/setting/setfriendGroup.jsp"/>
@@ -84,7 +89,8 @@
   	
   	<!-- 로그인박스 -->
   	<!-- 내블로그 -->
-  	<definition name="blog.tiles" template="/WEB-INF/views/friend/blog/blog.jsp">
+  	<definition name="blog.tiles" extends="settingmain.tiles">
+  	    <put-attribute name="main" value="/WEB-INF/views/friend/blog/blog.jsp"/>
   	</definition>
   	<!-- 로그인박스 -->
 

@@ -12,6 +12,9 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
+<!-- 이곳은 열린이웃 탭_내용 -->
+
+<!-- <div style="width:800px;"> -->
 <button type = "button" onclick="movegroup()">그룹이동</button>
 <button type = "button" onclick="receiveNew()">새글소식 받기</button>
 <button type = "button" onclick="del()">삭제</button>
@@ -24,6 +27,7 @@
   <br>
   <div align="center"><input type="submit" value="확인" onclick="location.href='setfriendGroup.do'"></div>
 </div>
+<!-- 그룹이동 div -->
 
 <!-- 새글소식 받기 div -->
 <div id="receiveNew" style="position:absolute; top:300px; left:400px; z-index:2; 
@@ -37,6 +41,7 @@
   <div align="center"><input type="submit" value="ON" onclick="location.href='setfriendGroup.do'">
   <input type="submit" value="OFF" onclick="location.href='setfriendGroup.do'"></div>
 </div>
+<!-- 새글소식 받기 div -->
 
 <!-- 삭제 div -->
 <div id="del" style="position:absolute; top:300px; left:400px; z-index:2; 
@@ -51,6 +56,7 @@
   <div align="center"><input type="submit" value="확인" onclick="location.href='setfriendGroup.do'">
   <input type="submit" value="취소" onclick="location.href='setfriendGroup.do'"></div>
 </div>
+<!-- 삭제 div -->
 
 정렬된 이웃 명 
 <select>
@@ -82,6 +88,13 @@
 
 </tr>
 </table>
+
+<div>
+	<input type="checkbox">&nbsp;전체선택&nbsp;
+	<button type = "button" onclick="movegroup()">그룹이동</button>
+    <button type = "button" onclick="receiveNew()">새글소식 받기</button>
+    <button type = "button" onclick="del()">삭제</button>
+</div>
 
 <script>
 //div에 X닫기 버튼 클릭시

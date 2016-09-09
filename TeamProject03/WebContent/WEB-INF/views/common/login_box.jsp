@@ -15,6 +15,12 @@
   <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">내가 남긴 글</a></li>
 </ul>
 <a href="#">오늘 방문수</a>&nbsp;&nbsp;&nbsp;<a href="#">서로이웃 신청</a> 
+<br><br>
+홍마님이 서로이웃 신청을 했습니다. X
+어제
+<hr>
+<strong>댓글</strong> 2016년 8월 30일 오후5...[1]
+by홍마 어제
 <br>
 <br>
 
@@ -24,6 +30,5 @@
   <li role="presentation" class="active" ><a href="blog.do" >이웃B</a></li>
 </ul>
 
-공지사항~~~~
 </body>
 </html>

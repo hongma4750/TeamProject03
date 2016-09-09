@@ -1,8 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<fmt:requestEncoding value ="utf-8"/> 
+<fmt:requestEncoding value ="utf-8"/>  
 
 <!-- 부트스트랩 링크 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +10,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
+
 
 <!-- 기본적으로 로그인했을때 뜨는 페이지임 -->
 <%-- <c:if test="${login.id not eq null}"> --%>

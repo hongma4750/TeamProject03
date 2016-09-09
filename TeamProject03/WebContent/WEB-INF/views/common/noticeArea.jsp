@@ -1,37 +1,6 @@
-<%-- <%@page import="sist.co.Notice.noticeManager"%> --%>
+
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ page import = "sist.co.Notice.NoticeVO" %>
-<%@ page import = "java.util.*" %>
 
-<%
-//noticeManager nm = new noticeManager();
-//List<NoticeVO> list = nm.getNAVERData();
-
-//Json 생성
-/* [
-		 {
-		   "key":"사과",
-		   "value":"7"
-		 },
-		 {
-			 "key":"바나나",
-			 "value":"1"
-		 },
-		 {
-			 "key":"딸기",
-			 "value":"3"
-	     }
-] */
-/* String jsonLike = "[";
-for(NoticeVO n:list){
-	jsonLike += "{title: '"+n.getTitle()+"},"; 	
-}
-jsonLike = jsonLike.substring(0,jsonLike.lastIndexOf(","));
-jsonLike += "]";
-
-System.out.println(jsonLike);
-request.setAttribute("jsonLike", jsonLike); */
-%>
 
 <!DOCTYPE html>
 
@@ -54,15 +23,4 @@ request.setAttribute("jsonLike", jsonLike); */
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-<!-- 공지사항 -->
-
-<!-- 
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function (){
-	jQuery.ajax({
-		type:"GET",
-		url:"./sist.co.N"
-	});
-});
-</script> -->
+공지사항~~

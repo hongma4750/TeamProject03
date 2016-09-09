@@ -49,19 +49,44 @@
 
 
 <ul class="nav nav-tabs" role="tablist" id="myTab">
-  <li role="presentation" class="active" ><a href="#" id="friendtab">열린이웃</a></li>
-  <li role="presentation"><a href="#" id="grouptab">이웃그룹</a></li>
-  <li role="presentation"><a href="#" id="seqtab">이웃순서</a></li>
+  <li rel="defaulttab" role="presentation" class="active" ><a href="#" >열린이웃</a></li>
+  <li rel="grouptab" role="presentation"><a href="#" >이웃그룹</a></li>
+  <li rel="seqtab" role="presentation"><a href="#" >이웃순서</a></li>
   <br><div align="right">
-  <input type="text" id="searchbar" value="" placeholder="별명,블로그명,ID"/>&nbsp;&nbsp;<input type="submit" id="btnSearch" value="검색"/></div>  
+  <input type="text" id="searchbar" value="" placeholder="별명,블로그명,ID"/>&nbsp;&nbsp;<input type="submit" id="btnSearch" value="검색"/>
+  </div>
+  <br>
+  
+  
+  <div id="others">
+    
+    <div role="tab_con" class="tab_con" id="defaulttab"></div>
+       <!-- 열린이웃 탭 클릭시_include -->
+       <jsp:include page="openfriend.jsp" flush="true"/>
+	      <%-- <jsp:param name="param" value="value1"/>
+       </jsp:include> --%>
+       <!-- 열린이웃 탭 클릭시_include -->
+    </div>
+   
+  
+    <div role="tab_con" class="tab_con" id="grouptab"></div>
+  <!-- 이웃그룹 탭 클릭시_include -->
+  <jsp:include page="friendgroup.jsp" flush="true"/>
+	    <%-- <jsp:param name="param" value="value1"/>
+  </jsp:include> --%>
+  <!-- 이웃그룹 탭 클릭시_include -->
+  </div>
+  
+  <!-- 이웃순서 탭 클릭시_include -->
+  <jsp:include page="friendseq.jsp" flush="false">
+	    <jsp:param name="param" value="value1"/>
+  </jsp:include>
+  <!-- 이웃순서 탭 클릭시_include -->
+  </div>
 </ul>
 
 
 <script>
-$("#friendtab").click(function(){
-	
-});
-
 //서로이웃 받기(사용)_확인 버튼 클릭시 div보이기
 $("#btndblfollowOk").click(function(){
 	document.all.dblfollow_on.style.display="block";
@@ -85,46 +110,18 @@ $("#btnSearch").click(function(){
 	}
 	
 });
+
+$(function () {
+    $(".tab_con").hide();
+    $(".tab_con:first").show();
+    
+    $("#section_cen ul.nav-tabs li").click(function(){
+       $("#section_cen ul.nav-tabs li").removeClass("active").css("color","red");
+       $(this).addClass("active").css("color","yellow");
+          $("#others .tab_con").hide();
+          var actTab = $(this).attr("rel");
+        $("#"+actTab).show();
+        
+    });
+  });
 </script>
-
-<%-- <c:if test="${'#friendtab'.click()==true }"> --%>
-	<jsp:include page="openfriend.jsp" flush="false">
-	    <jsp:param name="param" value="value1"/>
-	</jsp:include>
-<%-- </c:if> --%>
-
-<%-- <button type = "button">그룹이동</button>
-<button type = "button">새글소식 받기</button>
-<button type = "button">삭제</button>
-<button type = "button">열린이웃(RSS추가)</button>
-
-정렬된 이웃 명 
-<select>
-  <option selected="selected">이웃추가순</option>
-  <option>블로그명순</option>
-  <option>이웃별명순</option>
-</select>
-<br><br>
-
-<table>
-<col width="30px"/><col width="100px"/><col width="100px"/><col width="100px"/>
-<col width="100px"/><col width="100px"/><col width="100px"/>
-<tr>
-  <th><input type="checkbox"></th>
-  <th><select><option selected="selected">그룹전체</option></select></th>
-  <th><select><option selected="selected">이웃전체</option></select></th>
-  <th>이웃</th>
-  <th><select>
-        <option selected="selected">새글소식</option>
-        <option>알림전체</option>
-        <option>알림ON</option>
-        <option>알림OFF</option>
-      </select></th>
-  <th>최근포스트일</th>
-  <th>이웃추가일</th>
-</tr>
-
-<tr>
-
-</tr>
-</table> --%>
