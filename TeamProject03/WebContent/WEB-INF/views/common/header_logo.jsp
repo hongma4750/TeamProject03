@@ -59,19 +59,20 @@
 </style>
 
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" style="background-color:#FFFFFF; border-color:#FFFFFF;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">꽃밭에 홍미니</a>
+    <div class="navbar-header" >
+      <a class="navbar-brand" href="#"><p style="color:black; font-style: solid ;font-weight: 30px; font-size: 30px;">꽃밭에 홍미니</p></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin:0; padding:0;">
       <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
+      
+        <div class="form-group" style="border-color:#45B914; border-style:solid ;border-width:3px;">
         
-        <select class="form-control">
+        <select class="form-control" style="width:30%; display:inline-block; float:left; border-color:#45B914;">
 		  <option>1</option>
 		  <option>2</option>
 		  <option>3</option>
@@ -79,26 +80,19 @@
 		  <option>5</option>
 		</select>
 		
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" style="margin:auto; padding:auto;width:70%;border-color:#45B914;">
+          
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        
+        <button type="submit" class="btn btn-default" style="background-color:#45B914; 
+        border-color:#45B914; color:white; height:35px;">검색</button>
+        
       </form>
       
-      
-      <c:if test="${login.id eq null }">
-	      <ul class="nav navbar-nav navbar-right">
-	         <li><a href="login.do" >로그인</a></li>
-	      
+      <ul class="nav navbar-nav navbar-right">
+      <c:if test="${login.m_id ne null }">
 	      	<li><a href="blogInfo.do">블로그 정보</a></li>
-	      
-	        <li><a href="regi.do" >회원가입</a></li>
-	      
-	      
-	      
-	        <li><a href="myPage.do" >회원정보</a></li> 
-	      
-      
-      
+	        
       			<li>
                   	<a href="#" id="userInfo" >
                   		<img src="image/12.jpg" alt="..." class="img-circle" style="width:30px; height:30px;">
@@ -113,13 +107,15 @@
                   </li>
                   
                   
-      			</ul>
+      			
+      </c:if>
+
+      <c:if test="${login.m_id eq null }">
+      	 <li><a href="login.do" >로그인</a></li>
+      	 <li><a href="regi.do" >회원가입</a></li>
       </c:if>
       
-      
-      <c:if test="${login.id ne null }">
-      	
-      </c:if>
+      </ul>
       
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -155,7 +151,7 @@
 				</div>
 				
 				<div  style="padding:auto; margin:auto; margin-top:25px;vertical-align: text-bottom; text-align:center; ">
-					<a href="#"><span class="badge">로그아웃</span></a>
+					<a href="logout.do"><span class="badge">로그아웃</span></a>
 				</div>
 			</div>
 			

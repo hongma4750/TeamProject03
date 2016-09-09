@@ -21,8 +21,8 @@ public class SistMemberDAO {
 		return (SistMemberVO) sqlSession.selectOne(ns+"login", member);
 	}
 	
-	public boolean addMember(SistMemberVO membervo) throws Exception{
-		sqlSession.insert(ns+"addMember", membervo);
+	public boolean insertMember(SistMemberVO membervo) throws Exception{
+		sqlSession.insert(ns+"insertMember", membervo);
 		return true;
 		
 	}

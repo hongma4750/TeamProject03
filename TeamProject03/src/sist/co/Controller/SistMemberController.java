@@ -38,10 +38,55 @@ public class SistMemberController {
 		return "login.tiles";
 	}
 	
+	@RequestMapping(value="loginAF.do",method=RequestMethod.POST)
+	public String loginAF(SistMemberVO vo, Model model) throws Exception{
+		logger.info("loginAF.do 실행중");
+		
+		
+		SistMemberVO memvo = sistMemberService.login(vo);
+		
+		if(memvo == null){
+			
+		}else{
+			model.addAttribute("login",memvo);
+		}
+		return "index.tiles";
+	}
+	
 	@RequestMapping(value="regi.do",method=RequestMethod.GET)
 	public String regi(Model model){
 		logger.info("regi.do 실행중");
 		return "regi.tiles";
+	}
+	
+	@RequestMapping(value="regiAF.do",method=RequestMethod.POST)
+	public String regiAF(HttpServletRequest request,SistMemberVO vo, Model model) throws Exception{
+		logger.info("regiAF.do 실행중");
+
+		String b_year = request.getParameter("b_year");
+		String b_month = request.getParameter("b_month");
+		String b_day = two(request.getParameter("b_day"));
+		
+		String m_birthday = b_year+b_month+b_day;
+		
+		vo.setM_birthday(m_birthday);
+		
+		vo.toString();
+		
+		
+		sistMemberService.insertMember(vo);
+
+		return "index.tiles";
+	}
+	
+	
+	@RequestMapping(value="logout.do",method=RequestMethod.GET)
+	public String logout(HttpServletRequest request, Model model){
+		logger.info("logout.do 실행중 ");
+		
+		request.getSession().invalidate();
+		
+		return "index.tiles";
 	}
 	
 	@RequestMapping(value="idfind.do",method=RequestMethod.GET)
@@ -124,6 +169,11 @@ public class SistMemberController {
 		logger.info("blogInfo.do 실행중");
 		
 		return "blogInfo.tiles";
+	}
+	
+	
+	public String two(String msg){
+		return msg.length()>2? msg:"0"+msg;
 	}
 	
 	

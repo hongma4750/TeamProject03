@@ -71,7 +71,7 @@
                 </div>
         </div>
         
-       <form id="login-form" action="#" method="post">
+       <form id="login-form" action="regiAF.do" method="post">
             
         <div class="panel panel-success">
         
@@ -85,7 +85,7 @@
                     </div>
                     
                     <div>
-                        <input type="password" class="form-control" name="pwchk" placeholder="비밀번호 확인">
+                        <input type="password" class="form-control" placeholder="비밀번호 확인">
                     </div>
             </div>
             
@@ -102,11 +102,11 @@
                         <div class="btn-group" data-toggle="buttons" style="width:100%;">
 
 						  <label class="btn btn-primary" id="genderChk" style="width:50%;">
-						    <input type="radio" name="m_gender" id="option1" autocomplete="off" value="0"> 남자
+						    <input type="radio" name="m_gender" id="option1" autocomplete="off" value="m"> 남자
 						  </label>
 
 						  <label class="btn btn-primary" id="genderChk" style="width:50%; ">
-						    <input type="radio" name="m_gender" id="option2" autocomplete="off" value="1"> 여자
+						    <input type="radio" name="m_gender" id="option2" autocomplete="off" value="w"> 여자
 						  </label>
  							 
 						</div>	
@@ -123,7 +123,7 @@
 				                    </div>
 								</div>
 								<div class="col-md-4">
-									<select class="form-control" name="m_month">
+									<select class="form-control" name="b_month">
 									  <option selected>월</option>
 									  <option value="01">1</option>
 									  <option value="02">2</option>

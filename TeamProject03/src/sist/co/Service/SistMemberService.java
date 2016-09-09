@@ -10,7 +10,7 @@ public interface SistMemberService {
 	SistMemberVO login(SistMemberVO member)throws Exception;
 	
 	//회원가입
-	boolean addMember(SistMemberVO membervo) throws Exception;
+	boolean insertMember(SistMemberVO membervo) throws Exception;
 	
 	int getID(SistMemberVO vo);
 	

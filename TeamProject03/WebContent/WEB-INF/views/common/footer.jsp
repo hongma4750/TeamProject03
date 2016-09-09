@@ -18,4 +18,4 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
-푸터
+개발자 김홍민

@@ -18,13 +18,67 @@
 <script src="js/bootstrap.min.js"></script>
 <!-- 부트스트랩 링크 -->
 
+<style>
+.navs {
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	background-color:#6B767D;
+	font-size:25px;
+}
 
-<ul class="nav nav-tabs" role="tablist" id="myTab">
-  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-  <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-</ul>
+.navs>li {
+	position: relative;
+	display: block;
+	
+}
+
+.navs>li>a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	color:#FFFFFF;
+}
+
+.navs>li>a:focus, .navs>li>a:hover {
+	/* text-decoration: none; */
+	color:white;
+	background-color: #6B767D;
+}
+
+.navbar-nav>li>a:hover{
+	color:yellow;
+}
+
+.navbar-brand{
+	color:white;
+}
+
+.navbar-brand:hover{
+	color:yellow;
+	text-decoration: underline;
+}
+</style>
+
+
+<nav class="mynav" style="background-color:#6B767D;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" style="">
+    		<a class="navbar-brand" href="#" style="">블로그 홈</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="navs navbar-nav">
+      	
+      		<li><a href="#">Link</a></li>
+        	<li><a href="#">Link</a></li>
+      </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 
 
 

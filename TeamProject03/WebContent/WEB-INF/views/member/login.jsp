@@ -55,13 +55,13 @@
         <div class="panel panel-success">
         
             <div class="panel-body">
-                <form id="login-form">
+                <form id="login-form" action="loginAF.do" method="post">
                     <div>
-                        <input type="text" class="form-control" name="id" placeholder="아이디" autofocus>
+                        <input type="text" class="form-control" name="m_id" placeholder="아이디" autofocus>
                     </div>
                     
                     <div>
-                        <input type="password" class="form-control" name="pw" placeholder="비밀번호">
+                        <input type="password" class="form-control" name="m_pw" placeholder="비밀번호">
                     </div>
                     
                      <div>

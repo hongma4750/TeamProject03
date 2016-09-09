@@ -25,12 +25,12 @@ public class SistMemberImpl implements SistMemberService{
 		return sistMemberDAO.login(member);
 	}
 
-	
 	@Override
-	@Transactional					//수정가능 세팅
-	public boolean addMember(SistMemberVO membervo) throws Exception {
-		return sistMemberDAO.addMember(membervo);
+	public boolean insertMember(SistMemberVO membervo) throws Exception {
+		
+		return sistMemberDAO.insertMember(membervo);
 	}
+	
 
 
 	@Override
@@ -46,6 +46,9 @@ public class SistMemberImpl implements SistMemberService{
 		sistMemberDAO.createTable(map);
 		
 	}
+
+
+	
 	
 	
 }

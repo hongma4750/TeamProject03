@@ -7,11 +7,13 @@
   <mapper namespace="SistMember">
   	
   	<select id="login" parameterType="sist.co.Model.SistMemberVO" resultType="sist.co.Model.SistMemberVO">
-  		SELECT * FROM SISTMEMBER WHERE ID = #{id} AND PW = #{pw}
+  		SELECT M_ID,M_NAME, M_GENDER, M_BIRTHDAY, M_EMAIL, M_PHONE, M_ACTION, M_LOGCHK, M_LOGDATE, M_FAILDATE, M_AUTH
+	 	FROM MEMBER 
+	 	WHERE M_ID = #{m_id} AND M_PW = #{m_pw}
   	</select>
   	
-  	<insert id="addMember" parameterType="sist.co.Model.SistMemberVO">
-  		INSERT INTO SISTMEMBER VALUES (#{id},#{pw},#{name},#{email},3)
+  	<insert id="insertMember" parameterType="sist.co.Model.SistMemberVO">
+  		INSERT INTO MEMBER VALUES (#{m_id},#{m_pw},#{m_name},#{m_gender},#{m_birthday},#{m_email},#{m_phone},0,0,sysdate,sysdate,3)
   	</insert>
   	
   	<select id="getID" parameterType="sist.co.Model.SistMemberVO" 	resultType="java.lang.Integer">

@@ -31,7 +31,7 @@
 	</div>
 	<!-- 맨 위 헤더 -->
 
-	
+	<br>
 	<!-- 중간 위 스팟 내용들 바뀌는 부분 -->
 	
 	<div id="spot" style="background-color:yellow;">
@@ -77,7 +77,7 @@
 	
 	
 	<!-- 맨 아래 푸터 부분 -->
-	<div id="footer" style="background-color:skyblue;">
+	<div id="footer">
 		<tiles:insertAttribute name="footer"/>
 	</div>
 	<!-- 맨 아래 푸터 부분 -->
