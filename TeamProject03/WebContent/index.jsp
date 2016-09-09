@@ -27,14 +27,6 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-<div style="text-align:center;">
-<h1>자 이제 시작이야</h1>
-<h2>꽃밭에 블로그</h2>
-z
-</div>
-=======
->>>>>>> refs/heads/master
 
 <%
 response.sendRedirect("./index.do");
