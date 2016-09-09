@@ -74,6 +74,7 @@
       	
       		<li><a href="#">Link</a></li>
         	<li><a href="#">Link</a></li>
+        	<li role="presentation"><a href="#settings" onclick="url_calendar()" aria-controls="settings" role="tab" data-toggle="tab">cal</a></li>
       </ul>
 
     </div><!-- /.navbar-collapse -->

@@ -129,6 +129,45 @@
 	<definition name="poll_pop.tiles" template="/WEB-INF/views/pop/poll_pop.jsp">
 	</definition> 
 	
+	
+	<!-- calendar -->
+	<definition name="calendar.tiles"  template="/WEB-INF/views/callayouts-tiles.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+	    <put-attribute name="header_logo" value="/WEB-INF/views/common/header_logo.jsp"/>
+	    <put-attribute name="header_nav" value="/WEB-INF/views/common/header_nav.jsp"/>
+	    
+	    <put-attribute name="left_callist" value="/WEB-INF/views/calendar/left_callist.jsp"/>
+	    
+	    <put-attribute name="section_cen" value="/WEB-INF/views/calendar/calendar.jsp"/>
+		
+ 		<!-- <put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/> -->
+	</definition>
+	
+	<!-- 일정, 약속쓰기  -->
+	<definition name="schwrite.tiles" extends="calendar.tiles">
+		<put-attribute name="section_cen" value="/WEB-INF/views/calendar/sch/schwrite.jsp"/>
+	</definition>
+	
+	<!-- 캘린더 설정 -->
+	<definition name="setting.tiles" extends="calendar.tiles">
+		<put-attribute name="section_cen" value="/WEB-INF/views/calendar/setting/setting.jsp"/>
+	</definition>
+	
+	<!-- 캘린더 만들기 -->
+	<definition name="makecalendar.tiles" extends="calendar.tiles">
+		<put-attribute name="section_cen" value="/WEB-INF/views/calendar/makecal/make_calendar.jsp"/>
+	</definition>
+	
+	<!-- 공유 캘린더 만들기 -->
+	<definition name="make_sharecalendar.tiles" extends="calendar.tiles">
+		<put-attribute name="section_cen" value="/WEB-INF/views/calendar/makecal/make_sharecalendar.jsp"/>
+	</definition>
+	
+	<!-- 검색 페이지 -->
+	<definition name="search_cal.tiles" extends="calendar.tiles">
+		<put-attribute name="section_cen" value="/WEB-INF/views/calendar/search/search_cal.jsp"/>
+	</definition>
+	
 
 	
 

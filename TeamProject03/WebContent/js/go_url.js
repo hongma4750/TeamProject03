@@ -19,8 +19,39 @@ function url_bbswrite(){
 }
 
 /* calendar  */
+/* 캘린더 메인 */
 function url_calendar(){
 	self.location.href="calendar.do";
+	return false;
+}
+
+/* 일정, 약속 쓰기 */
+function url_schwrite(){
+	self.location.href="schwrite.do";
+	return false;
+}
+
+/* 캘린더 설정 */
+function url_setting(){
+	self.location.href="setting.do";
+	return false;
+}
+
+/* 내 캘린더 만들기 */
+function url_makecalendar(){
+	self.location.href="makecalendar.do";
+	return false;
+}
+
+/* 공유 캘린더 만들기 */
+function url_make_share_calendar(){
+	self.location.href="make_sharecalendar.do";
+	return false;
+}
+
+/* 일정 검색하기 */
+function url_search_cal(){
+	self.location.href="search_cal.do";
 	return false;
 }
 
@@ -28,6 +59,11 @@ function url_calwrite(){
 	self.location.href="calwrite.do";
 	return false;
 }
+
+
+
+
+
 
 function url_pdslist(){
 	self.location.href="pdslist.do";
